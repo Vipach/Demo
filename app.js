@@ -46,7 +46,7 @@ app.post('/search', async (req,res)=>{
 app.get('/delete',async (req,res)=>{
     const id = req.query.id;
     var ObjectID = require('mongodb').ObjectID;
-    const condition = {"_id" : ObjectID(id)};
+    const condition = {"_id" : Object(id)};
 
     const client= await MongoClient.connect(url);
     const dbo = client.db("Zito");
